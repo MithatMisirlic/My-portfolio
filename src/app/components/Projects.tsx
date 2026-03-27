@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const projects = [
   {
@@ -51,10 +50,10 @@ export function Projects() {
               className="overflow-hidden hover:shadow-2xl transition-all duration-300 dark:bg-gray-900 dark:border-gray-700 border-0 shadow-lg group hover:-translate-y-2"
             >
               <div className="aspect-video overflow-hidden bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900">
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
                 />
               </div>
               <CardHeader>

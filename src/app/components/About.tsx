@@ -1,5 +1,3 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-
 export function About() {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
