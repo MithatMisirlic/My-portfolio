@@ -6,8 +6,9 @@ const projects = [
   {
     id: 1,
     title: "Virtual React Machine",
-    description: "An interactive web application simulating a virtual machine environment built with React, demonstrating state management and component architecture.",
-    image: "./public/Locker.png",
+    description:
+        "An interactive web application simulating a virtual machine environment built with React, demonstrating state management and component architecture.",
+    image: "/Locker.png",
     tags: ["React", "JavaScript", "State Management"],
     github: "https://github.com/MithatMisirlic/virtual_react_machine",
     demo: null,
@@ -15,18 +16,20 @@ const projects = [
   {
     id: 2,
     title: "Database Project (VDE-AR-N 4105 Form E.1)",
-    description: "A database-driven application for managing and processing VDE-AR-N 4105 Form E.1 data, implementing CRUD operations and data validation.",
-    image: "./public/Registration.png",
+    description:
+        "A database-driven application for managing and processing VDE-AR-N 4105 Form E.1 data, implementing CRUD operations and data validation.",
+    image: "/Registration.png",
     tags: ["Node.js", "Database", "REST API"],
     github: "https://github.com/MithatMisirlic/DB_Project_E1_VDE",
     demo: null,
   },
   {
     id: 3,
-    title: "SEO-SEM content marketing project",
-    description: "A browser-based game inspired by the classic Centipede arcade game, built using vanilla JavaScript and HTML5 Canvas for game rendering.",
-    image: "./public/HydroNutri.png",
-    tags: ["HTML5", "CSS", "SEO-SEM optimization"],
+    title: "SEO-SEM Content Marketing Project",
+    description:
+        "A content-focused project centered on SEO/SEM optimization, structure, and visibility improvements for web presence and digital marketing outcomes.",
+    image: "/HydroNutri.png",
+    tags: ["HTML5", "CSS", "SEO-SEM Optimization"],
     github: "https://github.com/MithatMisirlic/SEO-SEM--content-marketing",
     demo: null,
   },
