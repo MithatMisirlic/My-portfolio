@@ -12,7 +12,7 @@ export function Hero() {
 
   const handleDownloadCV = () => {
     // This links to my CV
-    window.open("/cv.pdf", "_blank");
+    window.open("/Mithat_CV.pdf", "_blank");
   };
 
   return (
