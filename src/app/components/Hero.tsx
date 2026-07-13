@@ -69,7 +69,7 @@ export function Hero() {
                 className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
               >
                 <Download className="mr-2" size={20} />
-                Download CV
+                View CV
               </Button>
             </div>
 
