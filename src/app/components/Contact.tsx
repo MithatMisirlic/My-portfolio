@@ -151,7 +151,7 @@ export function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1 dark:text-white">LinkedIn</h3>
                       <a
-                          href="www.linkedin.com/in/mithat-misirlić"
+                          href="https://www.linkedin.com/in/mithat-misirlić"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors break-all"

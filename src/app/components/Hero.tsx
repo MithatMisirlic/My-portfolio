@@ -84,7 +84,7 @@ export function Hero() {
                 <Github size={28} />
               </a>
               <a
-                href="www.linkedin.com/in/mithat-misirlić"
+                href="https://www.linkedin.com/in/mithat-misirlić"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200"
