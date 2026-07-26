@@ -75,6 +75,8 @@ export type TranslationDictionary = {
     previewLinkAriaPrefix: string;
     counterAriaPrefix: string;
     counterAriaConnector: string;
+    previousProjectLabel: string;
+    nextProjectLabel: string;
     sourceLabel: string;
     demoLabel: string;
     sourceAriaPrefix: string;
@@ -216,6 +218,8 @@ const english: TranslationDictionary = {
     previewLinkAriaPrefix: "Open live preview for",
     counterAriaPrefix: "Project",
     counterAriaConnector: "of",
+    previousProjectLabel: "Previous project",
+    nextProjectLabel: "Next project",
     sourceLabel: "GitHub",
     demoLabel: "Live Demo",
     sourceAriaPrefix: "Open GitHub repository for",
@@ -372,6 +376,8 @@ const german: TranslationDictionary = {
     previewLinkAriaPrefix: "Live-Vorschau öffnen für",
     counterAriaPrefix: "Projekt",
     counterAriaConnector: "von",
+    previousProjectLabel: "Vorheriges Projekt",
+    nextProjectLabel: "Nächstes Projekt",
     sourceLabel: "GitHub",
     demoLabel: "Live-Demo",
     sourceAriaPrefix: "GitHub-Repository öffnen für",

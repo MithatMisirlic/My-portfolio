@@ -245,11 +245,6 @@
       inset 0 1px 0 rgb(255 255 255 / 0.035);
   }
 
-  .project-preview-enter {
-    animation: project-preview-enter var(--duration-deliberate)
-      var(--ease-polish);
-  }
-
   .skill-pill {
     box-shadow: var(--shadow-control);
     transition:
@@ -285,6 +280,13 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-preview-enter {
+    animation: project-preview-enter var(--duration-deliberate)
+      var(--ease-polish);
   }
 }
 
