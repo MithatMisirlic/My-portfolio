@@ -20,10 +20,10 @@ const projects: {
 }[] = [
   {
     id: 1,
-    translationKey: "virtualMachine",
-    title: "Virtual React Machine",
-    image: "/Locker.png",
-    github: "https://github.com/MithatMisirlic/virtual_react_machine",
+    translationKey: "seoProject",
+    title: "SEO-SEM Content Marketing Project",
+    image: "/HydroNutri.png",
+    github: "https://github.com/MithatMisirlic/SEO-SEM--content-marketing",
     demo: null,
   },
   {
@@ -36,10 +36,10 @@ const projects: {
   },
   {
     id: 3,
-    translationKey: "seoProject",
-    title: "SEO-SEM Content Marketing Project",
-    image: "/HydroNutri.png",
-    github: "https://github.com/MithatMisirlic/SEO-SEM--content-marketing",
+    translationKey: "virtualMachine",
+    title: "Virtual React Machine",
+    image: "/Locker.png",
+    github: "https://github.com/MithatMisirlic/virtual_react_machine",
     demo: null,
   },
 ];
