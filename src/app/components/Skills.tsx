@@ -13,7 +13,16 @@ const skillCategories: {
     id: 1,
     translationKey: "frontend",
     icon: Code2,
-    skills: ["React", "JavaScript (ES6+)", "HTML", "CSS", "Tailwind"],
+    skills: [
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Accessibility",
+    ],
     iconClass:
       "from-blue-500 to-cyan-500 shadow-[0_10px_24px_-14px_rgb(14_165_233_/_0.78)]",
   },
@@ -21,7 +30,7 @@ const skillCategories: {
     id: 2,
     translationKey: "backend",
     icon: Server,
-    skills: ["Node.js", "REST APIs"],
+    skills: ["Node.js", "REST APIs", "PostgreSQL", "SQL", "Strapi"],
     iconClass:
       "from-purple-500 to-fuchsia-500 shadow-[0_10px_24px_-14px_rgb(168_85_247_/_0.72)]",
   },
@@ -29,7 +38,7 @@ const skillCategories: {
     id: 3,
     translationKey: "tools",
     icon: Wrench,
-    skills: ["Git", "Docker"],
+    skills: ["Git", "GitHub", "Docker", "Vercel", "Figma", "Webflow", "Relume"],
     iconClass:
       "from-orange-500 to-red-500 shadow-[0_10px_24px_-14px_rgb(249_115_22_/_0.72)]",
   },
@@ -37,7 +46,14 @@ const skillCategories: {
     id: 4,
     translationKey: "other",
     icon: FileCode,
-    skills: ["C#"],
+    skills: [
+      "Python",
+      "OpenAI APIs",
+      "Prompt Engineering",
+      "Streamlit",
+      "Elasticsearch",
+      "C#",
+    ],
     iconClass:
       "from-emerald-500 to-green-600 shadow-[0_10px_24px_-14px_rgb(16_185_129_/_0.7)]",
   },

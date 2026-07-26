@@ -231,7 +231,7 @@ const english: TranslationDictionary = {
       frontend: "Frontend",
       backend: "Backend",
       tools: "Tools",
-      other: "Other",
+      other: "AI & Other",
     },
   },
   contact: {
@@ -380,7 +380,7 @@ const german: TranslationDictionary = {
       frontend: "Frontend",
       backend: "Backend",
       tools: "Werkzeuge",
-      other: "Weitere",
+      other: "KI & Weitere",
     },
   },
   contact: {
