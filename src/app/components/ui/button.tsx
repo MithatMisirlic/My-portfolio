@@ -5,26 +5,27 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "./utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-control text-sm font-medium outline-none transition-[color,background-color,border-color,box-shadow,transform] duration-polish ease-polish disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-ring/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-primary/90",
+        default:
+          "bg-gray-950 text-white shadow-control hover:bg-gray-800 hover:shadow-raised active:translate-y-px active:shadow-control-pressed dark:bg-white dark:text-gray-950 dark:hover:bg-gray-200",
         destructive:
-          "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+          "bg-destructive text-destructive-foreground shadow-control hover:bg-destructive/90 focus-visible:ring-destructive/25",
         outline:
-          "border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-border/40 bg-surface/70 text-foreground shadow-control hover:border-border/60 hover:bg-accent hover:text-accent-foreground hover:shadow-raised active:translate-y-px active:shadow-control-pressed",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground shadow-control hover:bg-secondary/80",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+          "shadow-none hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9 rounded-md",
+        default: "h-11 px-5 py-2 has-[>svg]:px-4",
+        sm: "h-9 gap-1.5 px-3.5 has-[>svg]:px-3",
+        lg: "h-12 gap-2 rounded-control px-6 py-3 text-sm font-semibold leading-none has-[>svg]:px-6",
+        icon: "size-11",
       },
     },
     defaultVariants: {
@@ -55,4 +56,4 @@ function Button({
   );
 }
 
-export { Button, buttonVariants };
+export { Button };

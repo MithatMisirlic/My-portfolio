@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-      <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors">
+      <div className="site-shell min-h-screen bg-white font-sans text-gray-900 transition-colors duration-deliberate dark:bg-[#08080a] dark:text-gray-100">
         <Header />
         <main>
           <Hero />

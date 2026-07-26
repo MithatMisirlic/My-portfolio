@@ -1,96 +1,99 @@
-import { ArrowRight, Github, Linkedin, Download } from "lucide-react";
-import { Button } from "./ui/button";
+import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
 import portraitImage from "../../assets/portrait.png";
+import { useLanguage } from "../i18n/LanguageContext";
+import { Button } from "./ui/button";
+import { scrollToSection } from "./ui/utils";
+
+const heroActionClass =
+  "w-full hover:-translate-y-0.5 sm:w-auto sm:min-w-44";
 
 export function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const { copy } = useLanguage();
 
   const handleDownloadCV = () => {
-    // This links to my CV
     window.open("/Mithat_CV.pdf", "_blank");
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Desktop: Horizontal row layout, Mobile: Stacked */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Left side - Portrait Image */}
-          <div className="flex-shrink-0">
-            <div className="relative group">
-              {/* Subtle glow effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-300"></div>
-              
-              {/* Image container with 4:5 aspect ratio */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
-                <div className="aspect-[4/5] w-full max-w-[320px] sm:max-w-[360px]">
-                  <img
-                    src={portraitImage}
-                    alt="Mithat Misirlic"
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
+    <section
+      id="home"
+      className="hero-ambient flex min-h-[100svh] items-center bg-gray-50 pt-16 dark:bg-[#08080a]"
+    >
+      <div className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="grid items-center justify-center gap-12 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[360px_minmax(0,1fr)]">
+          <div className="mx-auto w-[min(78vw,360px)] motion-safe:animate-portrait-float">
+            <div className="group relative">
+              <div
+                className="absolute -inset-7 rounded-[2.5rem_2.5rem_2.5rem_1.25rem] bg-gradient-to-br from-blue-500/15 to-purple-500/15 blur-3xl transition-opacity duration-deliberate group-hover:opacity-80 dark:from-blue-500/20 dark:to-purple-500/15"
+                aria-hidden="true"
+              />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem_2rem_2rem_0.75rem] bg-gray-200 shadow-[0_2px_3px_rgb(17_24_39_/_0.08),0_28px_68px_-32px_rgb(17_24_39_/_0.62),inset_0_1px_0_rgb(255_255_255_/_0.24)] dark:bg-gray-900 dark:shadow-[0_2px_2px_rgb(255_255_255_/_0.025),0_32px_78px_-34px_rgb(0_0_0_/_0.98),inset_0_1px_0_rgb(255_255_255_/_0.045)]">
+                <img
+                  src={portraitImage}
+                  alt="Mithat Misirlic"
+                  width="360"
+                  height="450"
+                  className="h-full w-full object-cover object-center"
+                />
               </div>
             </div>
           </div>
 
-          {/* Right side - Text Content */}
-          <div className="flex-1 text-center lg:text-left space-y-6">
+          <div className="w-full min-w-0 space-y-6 text-center lg:text-left">
             <div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 text-gray-900 dark:text-white tracking-tight">
+              <h1 className="mb-4 text-4xl font-bold text-gray-950 min-[390px]:text-5xl sm:text-6xl dark:text-white">
                 Mithat Misirlic
               </h1>
-              <p className="text-2xl sm:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 mb-6">
-                Full-Stack Web Development Student
+              <p className="mb-6 text-xl font-semibold leading-tight text-gray-700 min-[390px]:text-2xl sm:text-3xl dark:text-gray-200">
+                {copy.hero.role}
               </p>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Building responsive web applications using React, Node.js, and modern web technologies.
+              <p className="mx-auto max-w-xl text-lg leading-relaxed text-gray-600 sm:text-xl lg:mx-0 dark:text-gray-400">
+                {copy.hero.description}
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+            <div className="flex flex-col justify-center gap-4 pt-3 sm:flex-row lg:justify-start">
               <Button
                 onClick={() => scrollToSection("projects")}
                 size="lg"
-                className="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+                className={`${heroActionClass} group`}
               >
-                View Projects
-                <ArrowRight className="ml-2" size={20} />
+                {copy.hero.viewProjects}
+                <ArrowRight
+                  className="transition-transform duration-polish ease-polish group-hover:translate-x-1"
+                  size={20}
+                  aria-hidden="true"
+                />
               </Button>
               <Button
                 onClick={handleDownloadCV}
                 variant="outline"
                 size="lg"
-                className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+                className={heroActionClass}
               >
-                <Download className="mr-2" size={20} />
-                View CV
+                {copy.hero.viewCv}
+                <Download size={20} aria-hidden="true" />
               </Button>
             </div>
 
-            <div className="flex gap-6 pt-4 justify-center lg:justify-start">
+            <div className="flex justify-center gap-3 pt-3 lg:justify-start">
               <a
                 href="https://github.com/MithatMisirlic"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200"
-                aria-label="GitHub"
+                className="inline-flex size-11 items-center justify-center rounded-lg text-gray-600 outline-none transition-[color,background-color,transform] duration-polish hover:-translate-y-0.5 hover:bg-black/5 hover:text-gray-950 focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white"
+                aria-label={copy.hero.githubLabel}
               >
-                <Github size={28} />
+                <Github size={24} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/in/mithat-misirlić"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200"
-                aria-label="LinkedIn"
+                className="inline-flex size-11 items-center justify-center rounded-lg text-gray-600 outline-none transition-[color,background-color,transform] duration-polish hover:-translate-y-0.5 hover:bg-black/5 hover:text-gray-950 focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white"
+                aria-label={copy.hero.linkedinLabel}
               >
-                <Linkedin size={28} />
+                <Linkedin size={24} aria-hidden="true" />
               </a>
             </div>
           </div>

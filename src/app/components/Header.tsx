@@ -1,104 +1,96 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "../i18n/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import { scrollToSection } from "./ui/utils";
+
+const navigationItems = [
+  "home",
+  "about",
+  "projects",
+  "skills",
+  "contact",
+] as const;
+
+const navigationLinkClass =
+  "rounded-lg px-2 py-2 text-sm font-medium text-gray-600 outline-none transition-colors duration-polish hover:text-gray-950 focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:text-gray-400 dark:hover:text-white";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false);
-    }
-  };
+  const { copy } = useLanguage();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-semibold text-gray-900 dark:text-white">Web Developer Portfolio</div>
+    <header className="site-header fixed inset-x-0 top-0 z-50 border-b border-gray-200/80 dark:border-white/10">
+      <nav
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+        aria-label={copy.header.primaryNavigationLabel}
+      >
+        <div className="flex h-16 min-w-0 items-center justify-between gap-2">
+          <button
+            type="button"
+            onClick={() => scrollToSection("home")}
+            className="min-w-0 rounded-lg py-2 text-left text-sm font-semibold text-gray-900 outline-none transition-colors hover:text-gray-600 focus-visible:ring-4 focus-visible:ring-blue-500/20 min-[390px]:text-base sm:text-xl dark:text-white dark:hover:text-gray-300"
+          >
+            Mithat Misirlic
+          </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Contact
-            </button>
+          <div className="hidden items-center gap-3 md:flex lg:gap-5">
+            {navigationItems.map((sectionId) => (
+              <button
+                key={sectionId}
+                type="button"
+                onClick={() => scrollToSection(sectionId)}
+                className={navigationLinkClass}
+              >
+                {copy.header.navigation[sectionId]}
+              </button>
+            ))}
+            <LanguageSwitcher />
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button and Theme Toggle */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-1 md:hidden">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-900 dark:text-white"
+              type="button"
+              onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+              className="inline-flex size-11 items-center justify-center rounded-lg text-gray-900 outline-none transition-colors hover:bg-black/5 focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:text-white dark:hover:bg-white/5"
+              aria-label={
+                mobileMenuOpen
+                  ? copy.header.closeMenuLabel
+                  : copy.header.openMenuLabel
+              }
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? (
+                <X size={22} aria-hidden="true" />
+              ) : (
+                <Menu size={22} aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              Contact
-            </button>
+          <div
+            id="mobile-navigation"
+            className="space-y-1 border-t border-gray-200/80 py-3 md:hidden dark:border-white/10"
+          >
+            {navigationItems.map((sectionId) => (
+              <button
+                key={sectionId}
+                type="button"
+                onClick={() =>
+                  scrollToSection(sectionId, () => setMobileMenuOpen(false))
+                }
+                className="block min-h-11 w-full rounded-lg px-3 py-2.5 text-left text-base font-medium text-gray-700 outline-none transition-colors hover:bg-black/5 hover:text-gray-950 focus-visible:ring-4 focus-visible:ring-blue-500/20 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-white"
+              >
+                {copy.header.navigation[sectionId]}
+              </button>
+            ))}
           </div>
         )}
       </nav>
