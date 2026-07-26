@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="hero-ambient flex min-h-[100svh] items-center bg-gray-50 pt-16 dark:bg-[#08080a]"
+      className="hero-ambient flex min-h-[100svh] items-center bg-gray-50 pt-16 lg:pt-[4.5rem] dark:bg-[#08080a]"
     >
       <div className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid items-center justify-center gap-12 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[360px_minmax(0,1fr)]">

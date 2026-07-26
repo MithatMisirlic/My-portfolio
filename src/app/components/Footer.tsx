@@ -29,7 +29,7 @@ export function Footer() {
               <Github size={21} aria-hidden="true" />
             </a>
             <a
-              href="https://linkedin.com/in/mithat-misirlic-631733295"
+              href="https://www.linkedin.com/in/mithat-misirlić"
               target="_blank"
               rel="noopener noreferrer"
               className={footerSocialLinkClass}

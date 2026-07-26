@@ -20,6 +20,7 @@ export type TranslationDictionary = {
     primaryNavigationLabel: string;
     openMenuLabel: string;
     closeMenuLabel: string;
+    contactAction: string;
     languageSwitcherLabel: string;
     languageOptionLabels: Record<Language, string>;
     navigation: {
@@ -67,7 +68,13 @@ export type TranslationDictionary = {
   projects: {
     heading: string;
     subtitle: string;
+    selectorLabel: string;
+    selectorAriaLabel: string;
+    selectProjectAriaPrefix: string;
     previewAltSuffix: string;
+    previewLinkAriaPrefix: string;
+    counterAriaPrefix: string;
+    counterAriaConnector: string;
     sourceLabel: string;
     demoLabel: string;
     sourceAriaPrefix: string;
@@ -126,6 +133,7 @@ const english: TranslationDictionary = {
     primaryNavigationLabel: "Primary navigation",
     openMenuLabel: "Open navigation menu",
     closeMenuLabel: "Close navigation menu",
+    contactAction: "Let's Talk",
     languageSwitcherLabel: "Select language",
     languageOptionLabels: {
       en: "Switch to English",
@@ -201,11 +209,17 @@ const english: TranslationDictionary = {
   projects: {
     heading: "Projects",
     subtitle: "Real projects I've built while learning web development",
+    selectorLabel: "Project Index",
+    selectorAriaLabel: "Choose a project",
+    selectProjectAriaPrefix: "Select project",
     previewAltSuffix: "project preview",
-    sourceLabel: "Code",
-    demoLabel: "Demo",
-    sourceAriaPrefix: "View source code for",
-    demoAriaPrefix: "View live demo for",
+    previewLinkAriaPrefix: "Open live preview for",
+    counterAriaPrefix: "Project",
+    counterAriaConnector: "of",
+    sourceLabel: "GitHub",
+    demoLabel: "Live Demo",
+    sourceAriaPrefix: "Open GitHub repository for",
+    demoAriaPrefix: "Open live demo for",
     items: {
       virtualMachine: {
         description:
@@ -275,6 +289,7 @@ const german: TranslationDictionary = {
     primaryNavigationLabel: "Hauptnavigation",
     openMenuLabel: "Navigationsmenü öffnen",
     closeMenuLabel: "Navigationsmenü schließen",
+    contactAction: "Kontakt",
     languageSwitcherLabel: "Sprache auswählen",
     languageOptionLabels: {
       en: "Auf Englisch wechseln",
@@ -350,10 +365,16 @@ const german: TranslationDictionary = {
   projects: {
     heading: "Projekte",
     subtitle: "Praxisprojekte aus meinem Studium der Webentwicklung",
+    selectorLabel: "Projektauswahl",
+    selectorAriaLabel: "Projekt auswählen",
+    selectProjectAriaPrefix: "Projekt auswählen:",
     previewAltSuffix: "Projektvorschau",
-    sourceLabel: "Code",
-    demoLabel: "Demo",
-    sourceAriaPrefix: "Quellcode öffnen für",
+    previewLinkAriaPrefix: "Live-Vorschau öffnen für",
+    counterAriaPrefix: "Projekt",
+    counterAriaConnector: "von",
+    sourceLabel: "GitHub",
+    demoLabel: "Live-Demo",
+    sourceAriaPrefix: "GitHub-Repository öffnen für",
     demoAriaPrefix: "Live-Demo öffnen für",
     items: {
       virtualMachine: {
