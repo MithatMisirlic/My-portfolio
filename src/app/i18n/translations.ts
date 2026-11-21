@@ -154,7 +154,7 @@ const english: TranslationDictionary = {
     switchToDark: "Switch to dark theme",
   },
   hero: {
-    role: "Full-Stack Web Development Student",
+    role: "Web Development Student in Project Management",
     description:
       "Building responsive web applications using React, Node.js, and modern web technologies.",
     viewProjects: "View Projects",
@@ -313,7 +313,7 @@ const german: TranslationDictionary = {
     switchToDark: "Zum dunklen Design wechseln",
   },
   hero: {
-    role: "Student für Full-Stack-Webentwicklung",
+    role: "Student für Webentwicklung mit Schwerpunkt Projektmanagement",
     description:
       "Entwicklung responsiver Webanwendungen mit React, Node.js und modernen Webtechnologien.",
     viewProjects: "Projekte ansehen",
