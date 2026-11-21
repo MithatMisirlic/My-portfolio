@@ -129,7 +129,7 @@ export type TranslationDictionary = {
 
 const english: TranslationDictionary = {
   meta: {
-    title: "Mithat Misirlic | Web Developer",
+    title: "Mithat Misirlic | Web Development & Project Management",
   },
   header: {
     primaryNavigationLabel: "Primary navigation",
@@ -154,9 +154,9 @@ const english: TranslationDictionary = {
     switchToDark: "Switch to dark theme",
   },
   hero: {
-    role: "Full-Stack Web Development Student",
+    role: "Web Developer with a Project Management Focus",
     description:
-      "Building responsive web applications using React, Node.js, and modern web technologies.",
+      "Working student in Campus Management & Student Communication at SRH. Open to project management opportunities.",
     viewProjects: "View Projects",
     viewCv: "View CV",
     githubLabel: "Mithat Misirlic on GitHub",
@@ -166,26 +166,27 @@ const english: TranslationDictionary = {
     heading: "About Me",
     paragraphs: [
       [
-        { text: "I'm a Web Development student at " },
-        { text: "SRH Berlin", emphasis: true },
+        { text: "I study web development and currently work as a working student in " },
         {
-          text: ", focusing on building modern, responsive web applications with a strong emphasis on both frontend and full-stack development.",
+          text: "Campus Management & Student Communication at SRH",
+          emphasis: true,
         },
+        { text: "." },
       ],
       [
         {
-          text: "My technical focus is on JavaScript-based technologies, particularly ",
+          text: "I build responsive web applications with ",
         },
         { text: "React", emphasis: true },
-        { text: " for building user interfaces and " },
+        { text: " on the frontend and " },
         { text: "Node.js", emphasis: true },
         {
-          text: " for backend services. I enjoy solving complex problems and learning new technologies through hands-on project work.",
+          text: " on the backend.",
         },
       ],
       [
         {
-          text: "I'm passionate about writing clean, maintainable code and continuously improving my skills through practical application development. Currently, I'm looking for opportunities to apply my skills in a professional environment, whether through internships or working student positions.",
+          text: "My focus is on project management. I'm looking for opportunities to bring my technical background and experience in student communication to project planning and coordination.",
         },
       ],
     ],
@@ -200,11 +201,11 @@ const english: TranslationDictionary = {
       },
       focus: {
         label: "Focus",
-        value: "Frontend & full-stack development",
+        value: "Project management & web development",
       },
       opportunities: {
         label: "Opportunities",
-        value: "Internships or working student positions",
+        value: "Project management opportunities",
       },
     },
   },
@@ -254,7 +255,7 @@ const english: TranslationDictionary = {
   },
   contact: {
     heading: "Contact",
-    subtitle: "Feel free to reach out for collaboration or opportunities",
+    subtitle: "Get in touch about project management opportunities or web development collaborations.",
     form: {
       heading: "Send a Message",
       description: "Share a few details about your project or opportunity.",
@@ -287,7 +288,7 @@ const english: TranslationDictionary = {
 
 const german: TranslationDictionary = {
   meta: {
-    title: "Mithat Misirlic | Webentwickler",
+    title: "Mithat Misirlic | Webentwicklung & Projektmanagement",
   },
   header: {
     primaryNavigationLabel: "Hauptnavigation",
@@ -312,9 +313,9 @@ const german: TranslationDictionary = {
     switchToDark: "Zum dunklen Design wechseln",
   },
   hero: {
-    role: "Student für Full-Stack-Webentwicklung",
+    role: "Webentwickler mit Fokus auf Projektmanagement",
     description:
-      "Entwicklung responsiver Webanwendungen mit React, Node.js und modernen Webtechnologien.",
+      "Werkstudent im Bereich Campus Management & Student Communication an der SRH. Offen für berufliche Chancen im Projektmanagement.",
     viewProjects: "Projekte ansehen",
     viewCv: "Lebenslauf",
     githubLabel: "Mithat Misirlic auf GitHub",
@@ -324,26 +325,27 @@ const german: TranslationDictionary = {
     heading: "Über mich",
     paragraphs: [
       [
-        { text: "Ich studiere Webentwicklung an der " },
-        { text: "SRH Berlin", emphasis: true },
+        { text: "Ich studiere Webentwicklung und arbeite derzeit als Werkstudent im Bereich " },
         {
-          text: " und entwickle moderne, responsive Webanwendungen mit einem klaren Schwerpunkt auf Frontend- und Full-Stack-Entwicklung.",
+          text: "Campus Management & Student Communication an der SRH",
+          emphasis: true,
         },
+        { text: "." },
       ],
       [
         {
-          text: "Mein technischer Fokus liegt auf JavaScript-basierten Technologien, insbesondere ",
+          text: "Ich entwickle responsive Webanwendungen mit ",
         },
         { text: "React", emphasis: true },
-        { text: " für Benutzeroberflächen und " },
+        { text: " im Frontend und " },
         { text: "Node.js", emphasis: true },
         {
-          text: " für Backend-Services. Ich löse gerne komplexe Probleme und eigne mir neue Technologien durch praxisnahe Projektarbeit an.",
+          text: " im Backend.",
         },
       ],
       [
         {
-          text: "Ich lege Wert auf sauberen, wartbaren Code und entwickle meine Fähigkeiten durch praktische Anwendungsentwicklung kontinuierlich weiter. Aktuell suche ich Möglichkeiten, meine Kenntnisse in einem professionellen Umfeld einzusetzen – im Rahmen eines Praktikums oder einer Werkstudentenstelle.",
+          text: "Mein Fokus liegt auf Projektmanagement. Ich suche Möglichkeiten, mein technisches Wissen und meine Erfahrung in der Kommunikation mit Studierenden in die Planung und Koordination von Projekten einzubringen.",
         },
       ],
     ],
@@ -358,11 +360,11 @@ const german: TranslationDictionary = {
       },
       focus: {
         label: "Schwerpunkt",
-        value: "Frontend- & Full-Stack-Entwicklung",
+        value: "Projektmanagement & Webentwicklung",
       },
       opportunities: {
         label: "Möglichkeiten",
-        value: "Praktikum oder Werkstudentenstelle",
+        value: "Berufliche Chancen im Projektmanagement",
       },
     },
   },
@@ -412,7 +414,7 @@ const german: TranslationDictionary = {
   },
   contact: {
     heading: "Kontakt",
-    subtitle: "Kontaktieren Sie mich gerne für Projekte oder berufliche Chancen",
+    subtitle: "Kontaktieren Sie mich gerne für berufliche Chancen im Projektmanagement oder gemeinsame Webprojekte.",
     form: {
       heading: "Nachricht senden",
       description:
