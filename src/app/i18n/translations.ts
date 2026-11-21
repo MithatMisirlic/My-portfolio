@@ -166,27 +166,28 @@ const english: TranslationDictionary = {
     heading: "About Me",
     paragraphs: [
       [
-        { text: "I'm a Web Development student at " },
-        { text: "SRH Berlin", emphasis: true },
+        { text: "I like owning decisions and taking on challenges that make a product better for the people using it. As a working student in " },
         {
-          text: ", focusing on building modern, responsive web applications with a strong emphasis on both frontend and full-stack development.",
+          text: "Campus Management & Student Communication at SRH",
+          emphasis: true,
         },
+        { text: ", I talk with students every day. Those conversations show me what students need and where we can make campus life better." },
       ],
       [
-        {
-          text: "My technical focus is on JavaScript-based technologies, particularly ",
-        },
+        { text: "I bring that same approach to web development. I build with " },
         { text: "React", emphasis: true },
-        { text: " for building user interfaces and " },
+        { text: " and " },
         { text: "Node.js", emphasis: true },
         {
-          text: " for backend services. I enjoy solving complex problems and learning new technologies through hands-on project work.",
+          text: ", and I like talking ideas through. I listen when someone sees things differently, and I’ll say so if I get it wrong.",
         },
       ],
       [
         {
-          text: "I'm passionate about writing clean, maintainable code and continuously improving my skills through practical application development. Currently, I'm looking for opportunities to apply my skills in a professional environment, whether through internships or working student positions.",
+          text: "I want to take that responsibility into a more technical role. I’m open to ",
         },
+        { text: "technical project management", emphasis: true },
+        { text: " opportunities and to development roles with room to grow into project management." },
       ],
     ],
     facts: {
@@ -324,27 +325,28 @@ const german: TranslationDictionary = {
     heading: "Über mich",
     paragraphs: [
       [
-        { text: "Ich studiere Webentwicklung an der " },
-        { text: "SRH Berlin", emphasis: true },
+        { text: "Ich übernehme gern Verantwortung für Entscheidungen und packe Herausforderungen an, die ein Produkt für die Menschen verbessern, die es nutzen. Als Werkstudent im Bereich " },
         {
-          text: " und entwickle moderne, responsive Webanwendungen mit einem klaren Schwerpunkt auf Frontend- und Full-Stack-Entwicklung.",
+          text: "Campus Management & Student Communication an der SRH",
+          emphasis: true,
         },
+        { text: " spreche ich täglich mit Studierenden. In diesen Gesprächen erfahre ich, was sie brauchen und wo wir den Campusalltag verbessern können." },
       ],
       [
-        {
-          text: "Mein technischer Fokus liegt auf JavaScript-basierten Technologien, insbesondere ",
-        },
+        { text: "So gehe ich auch an die Webentwicklung heran. Ich arbeite mit " },
         { text: "React", emphasis: true },
-        { text: " für Benutzeroberflächen und " },
+        { text: " und " },
         { text: "Node.js", emphasis: true },
         {
-          text: " für Backend-Services. Ich löse gerne komplexe Probleme und eigne mir neue Technologien durch praxisnahe Projektarbeit an.",
+          text: " und bespreche Ideen gern im Team. Ich höre zu, wenn jemand die Sache anders sieht, und sage es offen, wenn ich falschlag.",
         },
       ],
       [
         {
-          text: "Ich lege Wert auf sauberen, wartbaren Code und entwickle meine Fähigkeiten durch praktische Anwendungsentwicklung kontinuierlich weiter. Aktuell suche ich Möglichkeiten, meine Kenntnisse in einem professionellen Umfeld einzusetzen – im Rahmen eines Praktikums oder einer Werkstudentenstelle.",
+          text: "Diese Verantwortung möchte ich künftig in einer technischeren Rolle übernehmen. Ich bin offen für Positionen im ",
         },
+        { text: "technischen Projektmanagement", emphasis: true },
+        { text: " und für Entwicklerstellen, in denen ich ins Projektmanagement hineinwachsen kann." },
       ],
     ],
     facts: {
